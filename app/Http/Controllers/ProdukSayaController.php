@@ -38,7 +38,7 @@ class ProdukSayaController extends Controller
             $data['file'] = 'data_produk/' . $filename;
           }
           Product::insert($data);
-          return redirect()->route('products');
+          return redirect()->route('product');
     }
     public function edit($id){
         $category=Category::get();

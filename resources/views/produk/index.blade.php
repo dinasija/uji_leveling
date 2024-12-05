@@ -3,18 +3,16 @@
 @section('content')
 <div class="container">
   <h2>Produk Saya</h2>
-    <div class="case-studies-block style-two mt-100"> 
-          <div class="nav left gap-8">
+  <ul class="list-group list-group-horizontal mt-3 ">
           <a href="{{route('product')}}">
-            <div class="nav-item text-button-small text-secondary pt-8 pb-8 pl-20 pr-20 pointer" data-name="all">Semua</div>
+            <li class="list-group-item btn btn-primary" >Semua</li>
           </a>
           @foreach ($category as $item)
-            <a href="{{route('product')}}?category={{$item->id}}">
-              <div class="nav-item text-button-small text-secondary pt-8 pb-8 pl-20 pr-20 pointer" data-name="all">{{$item->title}}</div>
+            <a href="{{route('product')}}?category={{$item->id}}" class="text-decoration-none">
+              <li class="list-group-item btn btn-primary">{{$item->title}}</li>
             </a>
           @endforeach
-    </div>
-</div>
+  </ul>
           <div class="row mt-40 row-gap-40">
             @foreach ($product as $item)
             <div class="col-12 col-xl-3 col-sm-7 item-filter" data-name="fintech">
